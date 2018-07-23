@@ -15,6 +15,7 @@ def hello():
     return "Hello World!"
 
 #each channel should have their own statistics 
+# will need to add in authentication button for each channel
 # - social media - 
 @app.route("/stats/facebook")
 def test():
