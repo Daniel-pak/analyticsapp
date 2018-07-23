@@ -14,11 +14,30 @@ def index():
 def hello():
     return "Hello World!"
 
-#each channel should have their own statistics
-@app.route("/stats")
+#each channel should have their own statistics 
+# - social media - 
+@app.route("/stats/facebook")
 def test():
-    r = requests.get("https://google.com")
+    r = requests.get("https://facebook.com")
     return r.text
+
+@app.route("/stats/twitter")
+def test1():
+    r = requests.get("https://twitter.com")
+    return r.text
+
+@app.route("/stats/pinterest")
+def test2():
+    r = requests.get("https://pinterest.com")
+    return r.text
+
+@app.route("/stats/youtube")
+def test3():
+    r = requests.get("https://youtube.com")
+    return r.text
+
+# - analytics channels - adwords, analytics, etc
+
 
 if __name__ == "__main__":
     app.run()
